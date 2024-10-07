@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model menu {
+  id        Int      @id @default(autoincrement())
+  name      String
+  mealType  String
+  category  String?
+  desc      String
+  price     Float
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  //define one to one relationship with product
+  // cart Cart?
+
+  //defining one to many relation with meal table
+  meal Meal[]
+}
+
+model Cart {
+  id        Int      @id @default(autoincrement())
+  // menuId    Int      @unique
+  quantity  Int
+  mealType  String
+  price     Float
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  // //define one to one relationship with product
+  // menu Menu @relation(fields: [menuId], references: [id])
+
+  //defining one to many relation with meal table
+  meal Meal[]
+}
+
+model Meal {
+  id       Int  @id @default(autoincrement())
+  cartId   Int
+  menuId   Int
+  quantity Int?
+
+  // defining many to one relation with cart table
+  cart Cart @relation(fields: [cartId], references: [id])
+
+  // defining many to one relation with menu table
+  menu menu @relation(fields: [menuId], references: [id])
+}
