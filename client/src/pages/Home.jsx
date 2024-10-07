@@ -3,24 +3,6 @@ import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
-    // <section className="flex-grow flex bg-gray-100">
-    //   <div className=" w-full h-screen bg-green-100 p-16 text-center flex flex-col justify-center items-center">
-    //     <h1 className="text-5xl font-bold text-orange-500 mb-4">DLunch Box</h1>
-    //     <p className="text-2xl mb-8">Hungry? You are in the right place</p>
-    //     <p className="text-gray-700 mb-6">
-    //       Customise your lunch box at no extra cost
-    //     </p>
-    //     <Link to="/menu-selection">
-    //       <button className="bg-orange-500 text-white px-8 py-3 rounded-md hover:bg-orange-600">
-    //         Online Order
-    //       </button>
-    //     </Link>
-    //   </div>
-    //   {/* <div className="w-1/2 bg-orange-500"></div> Orange Background */}
-    // </section>
-
-    ///////////////////////////////////////////////////////////////////////////
-
     <div className="font-sans">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-100 to-orange-500 py-20">

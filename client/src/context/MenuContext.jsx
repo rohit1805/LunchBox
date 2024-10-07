@@ -1,5 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import axios from "axios";
+const baseUrl = import.meta.env.VITE_BASE_URL;
 
 export const MenuContext = createContext();
 
@@ -11,7 +12,7 @@ export const MenuProvider = ({ children }) => {
   useEffect(() => {
     const fetchMenus = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/menus");
+        const response = await axios.get(`${baseUrl}/menus`);
         setMenus(response.data.allMenus);
       } catch (error) {
         setError(error);
