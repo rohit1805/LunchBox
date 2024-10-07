@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-    <nav className="bg-white p-4 flex justify-between items-center shadow">
+    <nav className="bg-white p-4 flex justify-between items-center shadow md:px-32">
       <div className="text-2xl font-bold text-orange-600">Lunch Box</div>
       <ul className="flex items-center space-x-6">
         <Link to={"/"}>
@@ -13,26 +13,6 @@ export const Navbar = () => {
             </a>
           </li>
         </Link>
-        {/* <li>
-          <a href="#" className="hover:text-orange-500">
-            About Us
-          </a>
-        </li>
-        <li>
-          <a href="#" className="hover:text-orange-500">
-            Career
-          </a>
-        </li>
-        <li>
-          <a href="#" className="hover:text-orange-500">
-            Contact Us
-          </a>
-        </li>
-        <li>
-          <button className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600">
-            Login
-          </button>
-        </li> */}
         <Link to={"/cart"}>
           <li>
             <a href="#">

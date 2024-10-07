@@ -16,7 +16,7 @@ export const Cart = () => {
   console.log("Cart items : ", cartContext.cart);
 
   return (
-    <div className="max-w-4xl mt-10 mx-5">
+    <div className="max-w-4xl mt-10 mx-5 md:mx-32 mb-10">
       <h1 className="text-3xl font-bold mb-6">Your Customized Order</h1>
 
       {cartData.map((order, index) => (

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { MenuContext } from "../context/MenuContext";
 
 export const Home = () => {
+  const menu = useContext(MenuContext);
+  menu.startBackend();
   return (
     <div className="font-sans">
       {/* Hero Section */}

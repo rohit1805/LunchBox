@@ -28,11 +28,18 @@ export const MenuProvider = ({ children }) => {
     return <div>Loading menus...</div>;
   }
 
+  const startBackend = async () => {
+    const res = await axios.get("https://lunchbox-gg0y.onrender.com/");
+    // console.log(res.data);
+  };
+
   if (error) {
     return <div>Error loading menus: {error.message}</div>;
   }
 
   return (
-    <MenuContext.Provider value={{ menus }}>{children}</MenuContext.Provider>
+    <MenuContext.Provider value={{ menus, startBackend }}>
+      {children}
+    </MenuContext.Provider>
   );
 };
