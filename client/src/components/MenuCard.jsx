@@ -43,7 +43,7 @@ export const MenuCard = ({ id, name, desc, price, isAdded, category }) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-60 border rounded-lg shadow py-3 px-3">
+    <div className="flex flex-col items-center w-60 border rounded-lg shadow-md py-3 px-3 bg-stone-50">
       <h1 className="text-xl font-semibold">{name}</h1>
       <h3 className="text-sm text-stone-600 ">{desc}</h3>
       <button

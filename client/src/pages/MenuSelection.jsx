@@ -203,7 +203,7 @@ export const MenuSelection = () => {
 
   return (
     <div className="relative h-screen">
-      <div className="bg-red-300 py-5 text-2xl font-bold text-center font-poppins w-full">
+      <div className="bg-amber-300 py-5 text-2xl font-bold text-center font-poppins w-full px-4">
         Customize your lunch according to your taste😋
       </div>
       <div className="">{content}</div>
