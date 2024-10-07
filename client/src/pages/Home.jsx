@@ -6,9 +6,9 @@ export const Home = () => {
   const menu = useContext(MenuContext);
   menu.startBackend();
   return (
-    <div className="font-sans">
+    <div className="font-sans ">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-100 to-orange-500 py-20">
+      <section className="bg-gradient-to-r from-green-100 to-orange-500 py-20 md:px-32">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
           <div className="w-full md:w-7/12 pr-0 md:pr-8 mb-8 md:mb-0">
             <h1 className="text-4xl md:text-8xl font-bold mb-4">DLunch Box</h1>
@@ -33,7 +33,7 @@ export const Home = () => {
       </section>
 
       {/* Work Process */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white md:px-32">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
           <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0">
@@ -78,7 +78,7 @@ export const Home = () => {
       </section>
 
       {/* Benefits */}
-      <section className="py-16 bg-green-100">
+      <section className="py-16 bg-green-100 md:px-32">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-4">
             Why customers choose us
@@ -143,7 +143,7 @@ export const Home = () => {
       </section>
 
       {/* Menu Options */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white md:px-32">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Our Menu Options
